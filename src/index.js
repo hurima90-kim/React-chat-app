@@ -1,12 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import { GlobalStyles } from '../src/styles/GlobalStyles';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import promiseMiddleware from 'redux-promise';
-import ReduxThunk from 'redux-thunk';
-import Reducer from './redux/reducer';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { GlobalStyles } from "../src/styles/GlobalStyles";
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware } from "redux";
+import promiseMiddleware from "redux-promise";
+import ReduxThunk from "redux-thunk";
+import Reducer from "./redux/reducer";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const createStoreWithMiddleware = applyMiddleware(
   promiseMiddleware,
@@ -28,5 +29,5 @@ ReactDOM.render(
       </Provider>
     </React.StrictMode>
   </>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
